@@ -1,1 +1,0 @@
-alert("Primeira aula sobre javascript!")
