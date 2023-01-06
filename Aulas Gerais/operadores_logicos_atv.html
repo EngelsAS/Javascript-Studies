@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>IfElse</title>
+
+		<script>
+
+			var nome = prompt('Digite seu nome')
+			var altura = prompt('Digite sua altura em centimetros. Ex: 172')
+			var peso = prompt('Informe seu peso')
+
+			altura = parseFloat(altura)
+			peso = parseFloat(peso)
+
+			altura /= 100
+
+			var M = peso / altura**2
+			var classificacao
+
+			if(M < 16){
+				classificacao = 'Baixo peso muito grave'
+			}else if(M >= 16 && M <=16.99){
+				classificacao = 'Baixo peso grave'
+			}else if(M >= 17 && M <=18.49){
+				classificacao = 'Baixo peso'
+			}else if(M >= 18.50 && M <=24.99){
+				classificacao = 'Peso normal'
+			}else if(M >= 25 && M <=29.99){
+				classificacao = 'Sobrepeso'
+			}else if(M >= 30 && M <=34.99){
+				classificacao = 'Obesidade grau I'
+			}else if(M >= 35 && M <=39.99){
+				classificacao = 'Obesidade grau II'
+			}else if(M > 40){
+				classificacao = 'Obesidade grau III'
+			}
+
+			document.write(nome + ' possui indice de massa corporal igual a '+ M + ', sendo classificacao como: '+classificacao+'.')
+
+
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
