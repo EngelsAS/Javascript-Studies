@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Concatenação</title>
+
+		<script>
+
+			function exibirNome(nome1, nome2){
+				if(true){
+					nome1('Engels', 'Antero')
+				}else{
+					nome2('José', 'Silva')
+				}
+			}
+
+			var nome1 = function(primeiro, segundo){
+				document.write('Seu primeiro nome é: '+primeiro+'. Seu segundo nome é: '+segundo+'.')
+			}
+
+			var nome2 = function(primeiro, segundo){
+				document.write('Seu primeiro nome é: '+primeiro+'. Seu segundo nome é: '+segundo+'.')
+			}
+
+			exibirNome(nome1, nome2)
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
