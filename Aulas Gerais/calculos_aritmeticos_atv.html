@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Calculos aritmeticos</title>
+
+		<script>
+
+			var num1 = prompt('Digite o primeiro numero:')
+			var operacao = prompt('Qual a operação que deseja realizar? (soma | subtracao)')
+			var num2 = prompt('Digite o segundo numero')
+
+			num1 = parseInt(num1)
+			num2 = parseInt(num2)
+			var resultado
+
+			if(operacao === 'soma'){
+				resultado = num1 + num2
+				document.write('<h4>O resultado é: '+resultado+'</h4>')
+			}else if(operacao === 'subtracao'){
+				resultado = num1 - num2
+				document.write('<h4>O resultado é: '+resultado+'</h4>')
+			}else{
+				document.write('Operaçao invalida')
+			}
+
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>
