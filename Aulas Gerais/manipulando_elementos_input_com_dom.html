@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Troca de valores de variaveis</title>
+
+		<script>
+
+
+			function extrairValor(){
+
+				var caracter = document.getElementById('entrada').value
+
+				document.getElementById('entrada').value = ''
+
+				caracter.trim()
+
+				if (caracter == '0'||caracter == '1'||caracter == '2'||caracter == '3'||caracter == '4'||caracter == '5'||caracter == '6'||caracter == '7'||caracter == '8'||caracter == '9') {
+					document.getElementById('numeros').value = caracter
+				}else{
+					document.getElementById('letras').value += caracter
+				}
+
+			}
+			
+
+		</script>
+	</head>
+
+	<body>
+
+		<span>Entrada:</span>
+		<input 
+			type="text" 
+			placeholder="Digite algo:"
+			id="entrada"
+			onkeyup="extrairValor()" 
+		>
+
+		<hr>
+
+		<span>Letras:</span>
+		<input 
+			type="text" 
+			placeholder="Digite algo:"
+			disabled="disabled"
+			id="letras" 
+		>
+
+		<span>Números:</span>
+		<input 
+			type="text" 
+			placeholder="Digite algo:"
+			disabled="disabled"
+			id="numeros" 
+		>
+
+	</body>
+
+</html>
