@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Troca de valores de variaveis</title>
+
+		<script>
+
+
+			function focoMudarCor(){
+				document.getElementById('campo').style.backgroundColor = 'yellow'
+			}
+
+			function recuperaValor(){
+				var valor_campo = document.getElementById('campo').value
+				console.log(valor_campo)
+
+				if(valor_campo.length < 3){
+					document.getElementById('campo').style.backgroundColor = 'red'
+				}else{
+					document.getElementById('campo').style.backgroundColor = 'green'
+				}
+
+
+			}
+			
+
+		</script>
+	</head>
+
+	<body>
+
+		<input 
+			type="text" 
+			id="campo" 
+			onfocus="focoMudarCor()"
+			onblur="recuperaValor()" 
+		>
+
+	</body>
+
+</html>
