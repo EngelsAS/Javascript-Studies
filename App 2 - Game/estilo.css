@@ -1,3 +1,10 @@
+body{
+	background-image: url(imagens/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+
 .mosquito1{
 	width: 50px;
 	height: 50px;
@@ -11,4 +18,33 @@
 .mosquito3{
 	width: 90px;
 	height: 90px;
+}
+
+.ladoA{
+	transform: scaleX(1);
+}
+
+.ladoB{
+	transform: scaleX(-1);
+}
+
+.painel{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 10px;
+	width: 190px;
+	border-top: 1px solid white;
+	background-color: white;
+	opacity: 0.7;
+}
+
+.vidas{
+	float: left;
+}
+
+.tempo{
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
 }
