@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+		
+		//Aqui criaremos a funcao e ao criarmos os parametros, atribuiremos a eles valores,que serão os valores default
+
+		function exemplo(nome = 'Pedro', sobrenome = 'Silva' , idade = '22'){
+
+		 document.write(`nome = ${nome}
+		sobrenome = ${sobrenome}
+		idade = ${idade}`)
+
+		 document.write('<br>')
+
+		}
+
+		//Chamando a funcao sem passar parametro nenhum
+
+		exemplo()
+
+		//Saida esperada: nome = Pedro. sobrenome = Silva. idade = 22
+		//Essa sera a saida pois, ao nao passar os valores para os parametros, o js usou os
+		//valores default
+
+		//Caso nao seja necessario ou nao queira passar um dos parametros, é possivel passar o valor undefined na chamada da funcao, assim, o parametro que tenha o valor undefined sera substituido pelo valor default. Exemplo:
+
+		exemplo(undefined, 'Costa', 26)
+
+		//Saída esperada: nome = Pedro. sobrenome = Costa. idade = 26
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
