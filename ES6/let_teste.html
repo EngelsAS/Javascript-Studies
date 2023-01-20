@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+
+
+
+		let TESTE = 10
+
+		console.log('Esse é o valor da variavel TESTE nos respectivos escopos')
+
+		if(TESTE == 10){
+			let exemplin = 23
+			console.log(exemplin)
+		}
+
+
+		function x(){
+			let TESTE = 15
+			console.log('Dentro do escopo de função: ' + TESTE)
+		}
+
+		x()
+
+		console.log('Dentro do escopo global: ' + TESTE)
+	</script>
+</head>
+<body>
+
+</body>
+</html>
