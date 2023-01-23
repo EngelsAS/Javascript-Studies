@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+
+		let produtoLiteral = {
+
+		  descricao: 'Geladeira',
+		  preco: 1800,
+		  verDescricao: function() {
+		    console.log(`${this.descricao} por apenas ${this.preco}`)
+		  }
+		}
+
+		/* Dessa forma que se cria um objeto literal, diretamente a partir de uma variavel.
+		Dentro dos parenteses ficam os atributos e os metodos desse objeto, a sintaxe deles
+		é dessa forma:
+		nome do ou metodo a esquerda e valor a direita, sempre com esses dois separados por
+		dois pontos ":"
+
+		IMPORTANTE: ao final da criacao de cada atributo, é preciso colocar uma virgula ","
+		para que o js reconheça que aquele é o fim da criacao do atributo;
+
+		Os metodos aqui sao criadas de forma analoga aos atributos, porem, o valor que o
+		metodo vai receber, sera referente a acao do mesmo, ou seja, o metodo vai receber
+		uma funcao como valor; */
+
+
+		produtoLiteral.verDescricao()
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
