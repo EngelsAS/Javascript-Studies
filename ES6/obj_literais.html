@@ -6,6 +6,8 @@
 	<title></title>
 
 	<script type="text/javascript">
+		
+		//Forma antiga de se fazer (ES5)
 
 		let produtoLiteral = {
 
@@ -29,8 +31,32 @@
 		metodo vai receber, sera referente a acao do mesmo, ou seja, o metodo vai receber
 		uma funcao como valor; */
 
-
 		produtoLiteral.verDescricao()
+		
+		//Forma atualizada de se fazer (ES6)
+
+		/* No ES6 foram adicionadas algumas melhorias para a notacao de objs literais como:
+
+		1 - podemos criar um atributo adicionando apenas seu nome, e caso ja exista uma
+		variavel com o mesmo nome desse atributo, o valor dela agora tbm sera o valor do
+		atributo
+
+		2 - agora nao é preciso mais especificar o operador function para criar uma funcao,
+		e nem mesmo colocar os dois pontos pra separar nome e valor. Exemplo: */
+
+		let nome = 'João'
+		let idade = 23
+
+		let objetoLiteral = {
+
+		  nome, //nome = nome da variavel; valor = valor da variavel
+		  idade,
+		  exibirResumo(){
+		    console.log(`nome: ${this.nome}, idade: ${this.idade}`)
+		  }
+		}
+
+		objetoLiteral.exibirResumo()
 	
 	</script>
 </head>
