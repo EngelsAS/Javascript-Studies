@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+
+		//•Utilizando no contexto spread(espalhar):
+
+		let exemplo = 'Estudos JS ES6'
+
+		console.log(exemplo)
+		//em seguida vamos dar um console.log com o operador spread atuando nessa string
+
+		console.log(...exemplo)
+		/*dessa forma, os caracteres contidos nessa string serao separados em caracteres
+		unicos, dessa forma, é possivel trabalhar com cada caractere individualmente, ou
+		para algum contexto, salvar essa estrutura de dados em um array*/
+
+		console.log([...exemplo])
+		//assim, cada caractere da string representara uma posicao no array;
+
+		//USANDO COM ARRAYS:
+
+		let lista1 = ['0','1','2']
+		let lista2 = ['3','4','5']
+		let listaCompleta = [...lista1, ...lista2, '6', '7', '8']
+		//Dessa forma teremos os dados dos dois arrays espalhados em um terceiro array
+
+		console.log(listaCompleta)
+
+		//USANDO COM OBJETOS
+
+		let pessoa = { nome: 'João', idade: 27 }
+		let clone = { endereco: 'Rua ABC', ...pessoa }
+
+		//Dessa forma, os atributos do obj pessoa serao espalhados dentro do obj clone
+
+		console.log(clone)
+
+		//•Utilizando no contexto rest(juntar):
+
+		/*Muito utilizado em funcoes, a partir dele, é possivel fazer com que um unico
+		parametro receba mais doq um valor, e esses valores serao colocados dentro de um
+		array, de forma respectiva a como foram enviados para a funcao*/
+
+		function soma(...param){
+			let resultado = 0
+		//aqui nos usamos o operador rest/spread para receber os parametros
+		  console.log(param)
+		/*Ja que 'param' é um array, podem ser feitas todas as acoes possiveis de fazer
+		  em qualquer array*/
+		  param.forEach(v => resultado += v)
+		  console.log(resultado)
+		}
+
+		soma(3, 4, 5, 6)/*Aqui nos passamos varios valores para o parametro que serao salvos
+		em 'param' como um array com os respectivos valores passados*/
+
+		/* Caso queira que em sua funcao, tenham parametros com valor definido e algum
+		com valores indefinidos, basta usar um parametro com o operador rest/spread como o
+		ultimo a ser recebido pela funcao*/
+
+		function indef(x, y, ...z){
+			console.log(x)//aqui virá o primeiro valor
+			console.log(y)//aqui virá o segundo valor
+			console.log(z)//aqui viram todos os valores depois do segundo
+		}
+
+		indef(10,15,4,14,8,12,26)
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
