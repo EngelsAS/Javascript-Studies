@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <script type="text/javascript">
+
+    //•Usualidades da desestruturacao em funcoes:
+
+    //Com Arrays:
+
+    /*É possivel passar um array completo como parametro de uma funcao e no recebimento
+    desse parametro fazer a filtragim e extracao dos dados desejados atraves da
+    desestruturacao. Exemplo:*/
+
+
+    //Criando o array
+    let arr = [10, 20, 30, 40]
+
+    //Pra usar a desestruturacao no momento do recebimento do array, usamos os colchetes
+    function teste([a,b, ,c]){
+
+      console.log(a,b,c)
+    //saida esperada: 10 20 40
+    }
+
+    //Aqui estamos chamando a funcao passando o array completo
+    teste(arr)
+
+    //Com objetos
+
+    //seguindo de forma analoga a desestruturacao com arrays, porem, usando as chaves
+
+    let obj = {
+
+     a: 10,
+     b: 20,
+     c: 30,
+     d: 40
+
+    }
+
+    function teste2({a, d}) {
+
+      console.log(a, d)
+
+    }
+
+    teste2(obj)
+
+    /*lembrando que podemos fazer todos procedimentos normais de desestruturacao,
+    mudanças de nomes de variaveis, atribuir valores defaults, etc*/
+  
+  </script>
+</head>
+<body>
+
+</body>
+</html>
