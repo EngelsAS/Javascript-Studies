@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script type="text/javascript">
+
+		//Com objetos, ao inves das chaves, usaremos os colchetes
+
+		//Criando o objeto
+
+		let produto = {
+		  descricao: 'Notebook',
+		  preco: 1800,
+		  detalhes: { 
+		    fabricante: 'abc',
+		    modelo: 'xyz',  
+		  }
+		}
+
+		//Agora podemos resgatar esses atributos atraves do operador de desestruturacao
+
+		let {descricao, preco} = produto
+		console.log(descricao, preco)
+		/*Nesse caso, precisamos usar os mesmos nomes dos atributos dentro do objeto, para
+		salvarmos esses valores com nomes/variaveis diferentes é preciso colocar dois pontos
+		':' apos o nome do atributo que deseja recuperar o valor, e do lado direito desses
+		dois pontos, atribuir o nome da variavel onde ele vai ser salvo. Exemplo*/ 
+
+		let {descricao: d, preco: p} = produto
+		console.log(d, p)
+		//Aqui estamos extraindo e salvando os valores desses atributos nas variaveis d e p
+
+		/*Como extrair atributos de um objeto interno? Para extrair atributos de um objeto
+		que está dentre de outro, nós usaremos os dois pontos apos o nome desse objeto que
+		está sendo designado como atributo dentro de outro, apos isso, abriremos colchetes
+		novamente, para indicar que estamos entrando em um nome objeto, ai sim, podemos
+		extrair os atributos desse objeto interno normalmente. Exemplo:*/
+
+		let {detalhes: {fabricante, modelo}} = produto
+		console.log(fabricante, modelo)
+
+		/*perceba que diferente da extração em arrays, aqui nos nao precisamos pular espaços
+		vazios ate chegarmos no atributo que queremos, com objeto, basta declarar o nome do
+		atributo que queremos acessar*/
+
+		/*Podemos tambem atribuir valores default sem nenhum problema, seja pra atributos que
+		nao existam dentro do objeto ou pra os que existam porem podem nao ter valor definido*/
+
+		let {detalhes: {fabricante: f = 'Qualquer', modelo: m = 'Ultimo'}, desconto = 25} = produto
+		console.log(f, m, desconto)
+		//Perceba que se o atributo ja tiver um valor definido, o valor default nao sera usado
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
