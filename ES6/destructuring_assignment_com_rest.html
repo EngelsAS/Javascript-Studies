@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <script type="text/javascript">
+
+    //•Utilizando o distruct junto com o operador rest:
+
+    //Com arrays:
+
+    let arr = [10,20,30,40]
+
+    let [primeiro, ...resto] = arr
+    console.log(primeiro)
+    console.log(resto)
+    /*aqui nos estamos extraindo o valor 10 em uma unica variavel e todos os valores
+    apos o 10 estao sendo salvos na variavel 'resto', pois essa variavel esta com o
+    operador rest*/
+
+    //Com objetos:
+
+    let obj = {a: 10, b: 20, c: 30, d: 40 }
+
+    let {a, ...restante} = obj
+    console.log(a)
+    console.log(restante)
+    /*Basicamente a mesma coisa da operacao com arrays, porem, usando as chaves, vale
+    lembrar que nesse caso a variavel com o operador spread pode ter qualquer nome, pois
+    ela ira juntar todos os atributos em sequencia ate o fim do objeto*/
+  
+  </script>
+</head>
+<body>
+
+</body>
+</html>
